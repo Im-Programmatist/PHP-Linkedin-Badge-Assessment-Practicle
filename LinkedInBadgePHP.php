@@ -275,5 +275,6 @@ while ($fruit_name = current($array)) {
 	}
 	next($array);
 }
+
 ?>
 
