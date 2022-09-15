@@ -1,0 +1,17 @@
+<books>
+    <book>
+        <title>A Tale of Two Cities</title>
+        <author>Charles Dickens</author>
+        <categories>
+            <category>Classics</category>
+            <category>Historical</category>
+        </categories>
+    </book>
+    <book>
+        <title>Then There Were None</title>
+        <author>Agatha Christies</author>
+        <categories>
+            <category>Mystery</category>
+        </categories>
+    </book>
+</books>
