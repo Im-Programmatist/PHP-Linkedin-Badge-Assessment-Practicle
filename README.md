@@ -1192,9 +1192,9 @@ if($i++ == 3) break;
 echo "loop stopped at $i by break statement";
 
 - [ ] loop stopped at 3 by break statement
-- [ ] loop stopped at 4 by break statement
+- [x] loop stopped at 4 by break statement
 - [ ] loop stopped at 6 by break statement
-- [x] loop stopped at 2 by break statement
+- [ ] loop stopped at 2 by break statement
 
 ####96. After creating your objects, you can call member functions related to that object, such as setting the names and prices for three "Pet" objects. What is the likely output of this code snippet?
 
