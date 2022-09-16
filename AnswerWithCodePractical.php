@@ -31,6 +31,10 @@ Print("\n Assigning operator with numbers - \n");
 echo $fruits[$i+=3]."\n";
 echo $fruits[$i=+3]."\n";
 echo $fruits[$i-=3]."\n";
+//below while loop print up to 10
+$i = 0; echo "increment before variable ++$ i - "; while ($i < 10) {  echo ++$i; print("\n"); }
+//below while loop print up to 9
+$i = 0; echo "increment after variable $ i++-"; while ($i < 10) { echo $i++; print("\n"); }
 
 Print("\n Assigning operator with variables - \n");
 $a = 1;
@@ -54,6 +58,16 @@ print($c);//first assign value of d to c and then addition happen, so value of c
 $f = $c + $e;// here not 3 + 6 it is now 5+6
 echo "\n F is -: ";
 print($f);//it would be 11
+
+print("\n -----\tReducer Function ----\t\n");
+print("return keyword in reducer function is must to make single value result on selected action(add, mult etc) from array ");
+
+echo array_reduce([1, 2, 5, 10, 11], function ($a, $b) {
+	//no matter sequence and name of variables i.e. $item and $carry
+	echo $a."\t".$b."\n";
+	return $a += $b;
+	//return $carry = $carry + $item;
+});//if return not set then print array element as it is in vertical direction
 
 print("\n-----\tClass and its object creation----\t\n");
 class A {
@@ -85,7 +99,7 @@ print("\n-----\tarray declaration in php----\t\n");
 $seasons=array("spring","summer","autumn","winter");
 print_r($seasons);
 
-print("\n-----\t/Set Cookies in php----\t\n");
+print("\n-----\tSet Cookies in php----\t\n");
 //Set Cookies --->
 $cookie_name = "user";
 $cookie_value = "Chetan Patil";
@@ -147,17 +161,26 @@ print("skip https:// and rest string is - ".substr($string, 8)."\n");
 
 print("\n-----\t == & === Operator----\t\n");
 if( 1 == true){
-	echo "1";
+	echo "-1-";
 }//True
 if( 1 === true){
-  	echo "2";
+  	echo "-2-";//condition false and control not enter here
 }//False
 if("chetan" == true){
-  	echo "3";
+  	echo "-3-";
 }//True
 if("php" === false){
-  	echo "4";
+  	echo "-4-"; //condition true i.e. why  control not enter here
 }//False
+if("0"==true){
+	echo "-0-"; //condition false and control not enter here
+}//False
+if(""){
+	echo "-null-";
+}//False
+if(3){
+	echo "-3 number-";
+}//true
 print("\n");
 
 //$ and $$ variables 
@@ -271,10 +294,19 @@ $array = array(
 while ($fruit_name = current($array)) {
 	//print(current($array)."\n");//it prints value of current element in array
 	if ($fruit_name == 'apple') {
-		echo key($array).'\n';
+		echo key($array);
+		print("\n");
 	}
 	next($array);
 }
+
+print("\n\t------PHP script finds the earliest and latest dates from an array----\t\n");
+
+$dates = array('2018-02-01', '2017-03-15', '2015-02-28');
+print("Latest Date: ". max($dates)."\n");
+print("Earliest Date: ". min($dates)."\n");
+
+print("\nmultiple classes from namespace in a single declaration --\n \tuse myApp\myNamespace\{ClassA, ClassB, ClassC};");
 
 ?>
 
